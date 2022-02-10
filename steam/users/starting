@@ -1,0 +1,5 @@
+steam/Scripts  .\activate
+
+steam/steam    python manage.py runserver
+
+steam-fe     npm start

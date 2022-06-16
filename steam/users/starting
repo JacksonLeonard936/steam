@@ -3,3 +3,5 @@ steam/Scripts  .\activate
 steam/steam    python manage.py runserver
 
 steam-fe     npm start
+
+token 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

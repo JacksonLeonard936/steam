@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.postgres.fields import JSONField
 
 class User(models.Model):
     name = models.CharField(max_length=50)
@@ -10,8 +11,10 @@ class Game(models.Model):
 
 class Match(models.Model):
     players = models.ManyToManyField(to=User)
-    winner = models.ForeignKey(to=User, on_delete=models.PROTECT, related_name="Winning_matches")
+    winner = models.ForeignKey(to=User, on_delete=models.PROTECT, related_name="Winning_matches", null = True)
     game = models.ForeignKey(to=Game, on_delete=models.PROTECT)
+    data = JSONField(null = True)
+    is_match_in_progress = models.BooleanField(default=True)
 
 class SessionCookie(models.Model):
     account = models.ForeignKey(to=User, on_delete=models.PROTECT, related_name="session_cookies")

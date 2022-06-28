@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-duqejs$72ct(^e#+h)yz-xjvs%s$yj_b94wbmf$=s0d&d0iv@v
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["steam-test-backend.herokuapp.com"]
 
 
 # Application definition
